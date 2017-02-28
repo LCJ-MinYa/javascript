@@ -7,7 +7,7 @@ Javascript高级程序设计每日笔记（我很懒..所以速度..）
 
 2.script嵌入代码时，在解释器对script元素内部所有代码求值完毕之前，页面内其余内容都不会被浏览器加载或显示。（这就是为什么script要加载在文档末尾，不阻塞DOM的渲染）。
 
-3.文档创建基本格式
-<a href="https://github.com/LCJ-MinYa/javascript/blob/master/HTML%E4%B8%AD%E4%BD%BF%E7%94%A8JavaScript/pc.html">(1).pc项目（即需要支持IE8浏览器的文档创建）</a>
+3.文档创建基本格式<br />
+<a href="https://github.com/LCJ-MinYa/javascript/blob/master/HTML%E4%B8%AD%E4%BD%BF%E7%94%A8JavaScript/pc.html">(1).pc项目（即需要支持IE8浏览器的文档创建）</a><br />
 <a href="https://github.com/LCJ-MinYa/javascript/blob/master/HTML%E4%B8%AD%E4%BD%BF%E7%94%A8JavaScript/html5.html">(2).移动端项目（即html5文档，现代浏览器）</a>
 
