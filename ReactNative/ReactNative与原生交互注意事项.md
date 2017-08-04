@@ -29,8 +29,8 @@ end
 该问题产生是因为pod的版本低于1.2.0导致的  
 解决办法:  
 1.sudo gem uninstall cocoapods.  
-2.sudo gem install cocoapods. 
-3.pod install. 
+2.sudo gem install cocoapods.   
+3.pod install.  
 附解决地址: <a href="https://github.com/facebook/react-native/issues/13010">https://github.com/facebook/react-native/issues/13010</a>
 
 # Undefined symbols for architecture x86_64:
