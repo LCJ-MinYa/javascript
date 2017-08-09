@@ -8,8 +8,8 @@ cnpm install -g pm2
 注意：  
 <pre>
 pm2 start app.js -i 4         # cluster mode 模式启动4个app.js的应用实例
-pm2 start app.js –name=”api” # 启动应用程序并命名为 “api”
-pm2 start app.js –watch      # 当文件变化时自动重启应用
+pm2 start app.js –-name siteone # 启动应用程序并命名为siteone
+pm2 start app.js –-watch      # 当文件变化时自动重启应用
 pm2 list                      # 列表 PM2 启动的所有的应用程序
 pm2 monit                     # 显示每个应用程序的CPU和内存占用情况
 pm2 show [app-name]           # 显示应用程序的所有信息
@@ -39,9 +39,7 @@ ln -s /usr/bin/node /usr/node/bin/node(替换为您node的位置)
 3、保存脚本  
 #pm2 save  
 4、创建开机启动脚本  
-#pm2 startup systemd  
-5、设置开机自动  
-#systemctl enable pm2.service  
-6、重启服务器测试  
+#pm2 startup systemd   
+5、重启服务器测试  
 #reboot  
-说明：如果您需要启动多个服务，需要多次运行步骤2即可（建议app.js改成绝对路径，加上–name参数，或者改成不同的名字，比如server.js,server1.js）
+说明：如果您需要启动多个服务，需要多次运行步骤2即可（建议app.js改成绝对路径，加上–-name参数，或者改成不同的名字，比如server.js,server1.js）
