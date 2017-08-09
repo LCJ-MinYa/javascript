@@ -13,3 +13,9 @@ SYSFONT="lat0-sun16"
 3.如果使用工具例如putty或者xshell必须保证该工具的字符编码与linux服务器的语言一致！！！  
 
 # 查看centos服务器下是否包含数据盘
+fdisk -l（即可查看当前所有硬盘状态）  
+-df Th(查看当前硬盘挂载情况)  
+目前阿里云不需要重新格式化数据盘直接挂载即可  
+mkdir /data(在根目录下新建data文件夹)  
+echo '/dev/vdb1 /data ext3 defaults 0 0' >> /etc/fstab(开机自行挂载)  
+最后可以通过使用-df Th来验证挂载是否成功  
