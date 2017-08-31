@@ -1,8 +1,7 @@
 ## 占位方法
-	设置5个相同的tabBaritem,将中间的tabBaritem设置为不显示内容。
-	//添加占位控制器[发布按钮]
- 	[self creatNav:[[UIViewController alloc] init] image:[UIImage imageNamed:@""] selectImage:[UIImage imageNamed:@""] title:nil];
- 	并且在viewWillAppear中增加发布按钮。
+	* 设置5个相同的tabBaritem,将中间的tabBaritem设置为不显示内容。[self creatNav:[[UIViewController alloc] init] image:[UIImage imageNamed:@""] selectImage:[UIImage imageNamed:@""] title:nil];
+ 	* 并且在viewWillAppear中增加发布按钮。
+ 
 ## 重新自定义布局子空间UITabBar
 
 * 新增UITabBar类并且继承自UITabBar
