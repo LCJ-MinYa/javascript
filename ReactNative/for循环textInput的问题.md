@@ -13,3 +13,10 @@ onChangeText只接受更改后的文本值一个参数，对应的key无法传�
 
 结果: 目前暂时无法解决
 采用迂回方式，点击修改时弹出modal层，然后在外层包裹TouchableOpacity点击方法可以传入对应的key
+
+2017-11-1: 采用闭包传入i
+for(let i=0; i< input.length; i++){
+  (function(i){
+    CODE;
+  })(i);
+}
