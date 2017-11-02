@@ -1,0 +1,1 @@
+Promise的用法.js
