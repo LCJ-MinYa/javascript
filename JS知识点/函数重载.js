@@ -76,7 +76,7 @@ var company = {
 		for (var i = 0; i < this.names.length; i++) {
 			allScore += this.names[i].score;
 		}
-		return allScore / 4;
+		return allScore / this.names.length;
 	}
 };
 var reloadCompanyFind = function(object, method, func) {
