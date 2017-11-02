@@ -47,3 +47,68 @@ reloadFunc();
 reloadFunc('one');
 reloadFunc('one', 'two');
 reloadFunc('one', 'two', 'three');
+
+
+
+/*
+ * 我们希望对象Company拥有一个find方法，当不传任何参数时，
+ * 就会把Company.names里面的所有人的平均分数返回回来；
+ * 因为find方法是根据参数的个数不同而执行不同的操作的，
+ * 所以，需要有一个reloadCompanyFind方法，能够如下的为Company添加find的重载：
+ */
+var company = {
+	names: [{
+		name: "张三",
+		score: 98
+	}, {
+		name: "李四",
+		score: 88
+	}, {
+		name: "王五",
+		score: 72
+	}, {
+		name: "赵六",
+		score: 56
+	}],
+	//返回所有人的平均分数
+	find: function() {
+		var allScore = 0;
+		for (var i = 0; i < this.names.length; i++) {
+			allScore += this.names[i].score;
+		}
+		return allScore / 4;
+	}
+};
+var reloadCompanyFind = function(object, method, func) {
+	var oldMethod = object[method];
+	//给object 重新赋予新的方法
+	object[method] = function() {
+		if (func.length == arguments.length) {
+			return func.apply(this, arguments);
+		} else if (typeof oldMethod == 'function') {
+			return oldMethod.apply(this, arguments);
+		}
+	};
+};
+reloadCompanyFind(company, 'find', function(name, name2) {
+	//返回其他人的姓名数组
+	var otherNames = [];
+	for (var i = 0; i < this.names.length; i++) {
+		if (this.names[i].name != name && this.names[i].name != name2) {
+			otherNames.push(this.names[i].name);
+		}
+	}
+	return otherNames;
+});
+reloadCompanyFind(company, 'find', function(name) {
+	//返回当前人的分数
+	for (var i = 0; i < this.names.length; i++) {
+		if (name == this.names[i].name) {
+			return name + '的分数是' + this.names[i].score;
+		}
+	}
+});
+console.log(company.find());
+console.log(company.find('张三'));
+console.log(company.find('张三', '李四'));
+//PS：感觉此方法不如传统方法直观
