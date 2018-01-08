@@ -1,1 +1,1 @@
-ThinkJs.js
+ThinkJs.js test
