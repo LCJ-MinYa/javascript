@@ -16,9 +16,15 @@ onChangeText只接受更改后的文本值一个参数，对应的key无法传�
 
 2017-11-1: 采用闭包传入i
 ```javascript
-for(let i=0; i< input.length; i++){
+解法1: 
+for(var i=0; i< input.length; i++){
   (function(i){
     CODE;
   })(i);
+}
+
+解法2:
+for(let i=0; i< input.length; i++){
+  CODE;
 }
 ```
