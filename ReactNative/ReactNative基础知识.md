@@ -202,8 +202,14 @@ const styles = StyleSheet.create({
 export default flatList;
 ```
 
+# Props和State
 
+## Props
+大多数组件在创建时就可以使用各种参数来进行定制。用于定制的这些参数就称为props（属性）。  
 
+## State
+我们使用两种数据来控制一个组件：props和state。props是在父组件中指定，而且一经指定，在被指定的组件的生命周期中则不再改变。 对于需要改变的数据，我们需要使用state。  
+一般来说，你需要在constructor中初始化state
 
 
 
