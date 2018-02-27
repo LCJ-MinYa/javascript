@@ -71,7 +71,6 @@ import UISize from './UISize'
 
 # Flexbox布局
 
-
 ## Flex Direction
 在组件的style中指定flexDirection可以决定布局的主轴。子元素是应该沿着水平轴(row)方向排列，还是沿着竖直轴(column)方向排列呢？默认值是竖直轴(column)方向。
 
@@ -81,5 +80,23 @@ import UISize from './UISize'
 ## Align Items
 在组件的style中指定alignItems可以决定其子元素沿着次轴（与主轴垂直的轴，比如若主轴方向为row，则次轴方向为column）的排列方式。子元素是应该靠近次轴的起始端还是末尾段分布呢？亦或应该均匀分布？对应的这些可选项有：flex-start、center、flex-end以及stretch。
 
+# 图片
 
+## 字体图标
+1.准备好需要用到字体图标文件.tff文件  
+2.ios以蓝色文件夹拖入工程,在info.plist中加入字体;安卓需要将ttf文件放在android/app/src/main/assets/fonts目录下（完成后需要重新编译）
+``` javascript
+<View style={styles.fontImgView}>
+	<Text style={styles.fontImgText}>&#xe75b;</Text>
+	<Text style={styles.fontImgText}>&#xe6ca;</Text>
+	<Text style={styles.fontImgText}>&#xe864;</Text>
+</View>
 
+fontImgView: {
+	flexDirection: 'row'
+},
+fontImgText: {
+	fontFamily: 'iconfont',
+	fontSize: 20,
+}
+```
