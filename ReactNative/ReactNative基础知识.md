@@ -211,8 +211,73 @@ export default flatList;
 我们使用两种数据来控制一个组件：props和state。props是在父组件中指定，而且一经指定，在被指定的组件的生命周期中则不再改变。 对于需要改变的数据，我们需要使用state。  
 一般来说，你需要在constructor中初始化state
 
+# 组件的生命周期
 
+React Native组件的生命周期
+可以说整个React Native应用是由各种类型的组件构成。而每个组件都有其各自的生命周期。组件由初生到消亡，React Native框架通过不同的生命周期方法，为我们提供了方便切入组件生命周期的钩子，让我们可以在正确的时间点做正确的事情。
 
+当应用启动，React Native框架在内存中维护着一个虚拟DOM树。所谓组件的生命周期即由组件初始化并挂载到虚拟DOM为起始，到组件由虚拟DOM卸载为终结，组件的不同状态。生命周期方法则是组件在虚拟DOM树不同状态的描述。
+
+理解组件的生命周期方法是理解组件生命周期的关键，现在就让我们来详细探究组件的生命周期方法。
+
+生命周期方法
+组件的生命周期方法对应着组件的不同生命阶段，通常我们分为三个阶段：组件初始化及挂载阶段、组件运行期阶段及组件卸载阶段。
+
+初始化及挂载阶段
+一、这是组件类的构造函数，通常在此初始化state数据模型。
+
+constructor(props) {
+  super(props);
+  this.state = {
+    //key : value
+  };
+}
+二、表示组件将要加载到虚拟DOM，在render方法之前执行，整个生命周期只执行一次。
+
+componentWillMount() {
+
+}
+三、表示组件已经加载到虚拟DOM，在render方法之后执行，整个生命周期只执行一次。通常在该方法中完成异步网络请求或者集成其他JavaScript库。
+
+componentDidMount() {
+
+}
+运行期阶段
+一、在组件接收到其父组件传递的props的时候执行,参数为父组件传递的props。在组件的整个生命周期可以多次执行。通常在此方法接收新的props值，重新设置state。
+
+componentWillReceiveProps(nextProps) {
+  this.setState({
+    //key : value
+  });
+}
+二、在componentWillReceiveProps(nextProps)执行之后立刻执行；或者在state更改之后立刻执行。该方法包含两个参数，分别是props和state。该方法在组件的整个生命周期可以多次执行。如果该方法返回false，则componentWillUpdate(nextProps, nextState)及其之后执行的方法都不会执行，组件则不会进行重新渲染。
+
+shouldComponentUpdate(nextProps, nextState) {
+  return true;
+}
+二、在shouldComponentUpdate(nextProps, nextState)函数执行完毕之后立刻调用，该方法包含两个参数，分别是props和state。render()函数执行之前调用。该方法在组件的整个生命周期可以多次执行。
+
+componentWillUpdate(nextProps, nextState) {
+
+}
+三、在render()方法执行之后立刻调用。该方法包含两个参数，分别是props和state。该方法在组件的整个生命周期可以多次执行。
+
+componentDidUpdate(preProps, preState) {
+
+}
+四、render方法用于渲染组件。在初始化阶段和运行期阶段都会执行。
+
+render() {
+  return(
+    <View/>
+  );
+}
+卸载阶段
+一、在组件由虚拟DOM卸载的时候调用。
+
+componentWillUnmount() {
+
+}
 
 
 
