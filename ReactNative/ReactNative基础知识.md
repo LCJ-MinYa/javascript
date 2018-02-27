@@ -100,3 +100,43 @@ fontImgText: {
 	fontSize: 20,
 }
 ```
+
+## 图片
+
+### App图片资源
+此时只需要引入文件名，不需要路径和后缀,必须指定图片大小否则不会显示(同样需要重新编译)  
+```javascript
+<Image source={{uri: 'app_icon'}} style={{width: 40, height: 40}} />
+```
+
+### 网络图片
+很多要在App中显示的图片并不能在编译的时候获得，又或者有时候需要动态载入来减少打包后的二进制文件的大小。这些时候，与静态资源不同的是，你需要手动指定图片的尺寸。
+```javascript
+<Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{width: 400, height: 400}} />
+```
+
+### 静态图片资源
+要往App中添加一个静态图片，只需把图片文件放在代码文件夹中某处，然后像下面这样去引用它：
+```javascript
+<Image source={require('./my-icon.png')} />
+```
+* 支持不同平台自动选择不同图片,命名方式my-icon.ios.png和my-icon.android.png  
+* 支持@2x,@3x不同分辨率的图片,命名方式my-icon@2x.png和my-icon@3x.png
+> require中的图片名字必须是一个静态字符串（不能使用变量！因为require是在编译时期执行，而非运行时期执行！）  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
