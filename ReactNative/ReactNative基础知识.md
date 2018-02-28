@@ -278,7 +278,7 @@ render() {
   );
 }
 ```
-卸载阶段
+* 卸载阶段
 一、在组件由虚拟DOM卸载的时候调用。
 ```javascript
 componentWillUnmount() {
@@ -286,7 +286,9 @@ componentWillUnmount() {
 }
 ```
 
+# 网络
 
+# 调试技巧
 
 
 
