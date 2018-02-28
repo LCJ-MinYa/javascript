@@ -58,8 +58,8 @@ UI设计原型：基于iphone6
 分辨率：1334 x 750 px  
 deviceWidthDp为当前运行设备的宽度，uiWidthPx为UI设计图的宽度，uiElementPx设计图中标注的元素的px值。  
 例如: 750的设计稿view宽为200  
-在rn的iphone6中宽度为20*375/750=10 => view在iphone6中显示为10个单位，占整个屏幕的10/375  
-在rn的一个安卓模拟器中宽度为20*384/750=10.24 => view在iphone6中显示为10.24个单位，占整个屏幕的10.24/384    
+在rn的iphone6中宽度为20X375/750=10 => view在iphone6中显示为10个单位，占整个屏幕的10/375  
+在rn的一个安卓模拟器中宽度为20X384/750=10.24 => view在iphone6中显示为10.24个单位，占整个屏幕的10.24/384    
 那么使用的话，比如一个View的UI标注宽高为200x400  
 
 ``` javascript
@@ -289,6 +289,8 @@ componentWillUnmount() {
 # 网络
 
 # 调试技巧
+
+# Global和AsyncStorage
 
 
 
