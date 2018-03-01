@@ -6,14 +6,18 @@
 终于facebook坐不住了，在前一段时间开始推荐使用react-navigation，并且在0.44发布的时将之前一直存在的Navigator废弃了。
 react-navigation是致力于解决导航卡顿，数据传递，Tabbar和navigator布局，支持redux。虽然现在功能还不完善，但基本是可以在项目中推荐使用的。
 
-## react-navigation三部分
+## react-navigation三大模块
 
 * StackNavigator类似顶部导航条，用来跳转页面和传递参数
 * TabNavigator类似底部标签栏，用来区分模块
 * DrawerNavigator抽屉，类似从App左侧滑出一个页面
 
-# 组件引入与继承
+# 组件之间传值(父->子，子->父,同级之间)
 
 # redux数据流
 
-# 第三方组件的使用
+# 与原生交互
+
+# 封装原生组件
+
+# 第三方组件的使用（键盘弹出事件）
