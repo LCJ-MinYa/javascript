@@ -23,8 +23,8 @@ react-navigation是致力于解决导航卡顿，数据传递，Tabbar和navigat
 3.如果嵌套太深的话，就必须一次次回调传入的回调函数，来实现子组件向父组件传值或者操作；
 
 * 同级组件传值
-** DeviceEventEmitter跨组件通信（注册监听）
-** 父组件定义state,然后props传递给每个子组件,通过子组件回调方法触发父组件state更新来更改另外一个组件props的更新  
+	* DeviceEventEmitter跨组件通信（注册监听）
+	* 父组件定义state,然后props传递给每个子组件,通过子组件回调方法触发父组件state更新来更改另外一个组件props的更新  
 
 # redux数据流
 
