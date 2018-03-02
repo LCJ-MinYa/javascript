@@ -12,6 +12,27 @@ react-navigation是致力于解决导航卡顿，数据传递，Tabbar和navigat
 * TabNavigator类似底部标签栏，用来区分模块
 * DrawerNavigator抽屉，类似从App左侧滑出一个页面
 
+## navigation
+在StackNavigator中注册后的组件都有navigation这个属性. navigation又有5个参数:navigate, goBack, state, setParams, dispatch, 可以在组件下console.log一下this.props就能看到.
+
+* this.props.navigation.navigate('Two', { name: 'two' }): push下一个页面
+	* routeName: 注册过的目标路由名称
+	* params: 传递的参数
+	* action: 如果该界面是一个navigator的话，将运行这个sub-action
+* this.props.navigation.goBack(): 返回上一页
+
+* this.props.navigation.state: 每个界面通过这去访问它的router，state其中包括了：
+	* routeName: 路由名
+	* key: 路由身份标识
+	* params: 参数
+
+* this.props.navigation.setParams: 该方法允许界面更改router中的参数，可以用来动态的更改导航栏的内容
+
+* this.props.navigation.dispatch: 可以dispatch一些action，主要支持的action有：
+	* Navigate:
+	* Reset: Reset方法会清除原来的路由记录，添加上新设置的路由信息, 可以指定多个action，index是指定默认显示的那个路由页面, 注意不要越界了
+	* SetParams: 为指定的router更新参数，该参数必须是已经存在于router的param中
+
 # 组件之间传值(父->子，子->父,同级之间)
 
 * 父组件向子组件传值
