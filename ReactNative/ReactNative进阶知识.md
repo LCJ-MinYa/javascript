@@ -26,7 +26,7 @@ react-navigation是致力于解决导航卡顿，数据传递，Tabbar和navigat
 	* DeviceEventEmitter跨组件通信（注册监听）
 	* 父组件定义state,然后props传递给每个子组件,通过子组件回调方法触发父组件state更新来更改另外一个组件props的更新  
 
-# redux数据流
+# [redux数据流](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
 
 # 与原生交互
 
