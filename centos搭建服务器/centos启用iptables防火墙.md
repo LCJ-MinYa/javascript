@@ -7,7 +7,13 @@
 > * firewalld.service   
    Loaded: masked (/dev/null; bad)  
    Active: inactive (dead)   
-   dead表示firewalld未开启
+   dead表示firewalld未开启，active表示生效  
 
 # 查看防火墙当前生效规则命令
 > iptables -L -n
+
+# 步骤
+* 先检查是否安装了iptables
+```
+service iptables status
+```
