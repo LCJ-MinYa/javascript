@@ -1,6 +1,9 @@
 # react native
 react native日常学习记录  
-<a href="https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/ReactNative%E4%B8%8E%E5%8E%9F%E7%94%9F%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md">(1).ReactNative与原生交互注意事项</a>.  
+* <a href="https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/ReactNative%E4%B8%8E%E5%8E%9F%E7%94%9F%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md">ReactNative与原生交互注意事项</a>.  
+* [ReactNative基础知识](https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/ReactNative%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
+* [ReactNative进阶知识](https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/ReactNative%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86.md)
+* [for循环textInput的问题](https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/for%E5%BE%AA%E7%8E%AFtextInput%E7%9A%84%E9%97%AE%E9%A2%98.md)
 
 # javascript
 Javascript高级程序设计每日笔记（我很懒..所以速度..）
