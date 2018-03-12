@@ -45,7 +45,7 @@ object => 引用类型
 * [pm2配置文件](https://github.com/LCJ-MinYa/javascript/blob/master/centos%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/ecosystem.config(pm2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BD%86%E5%90%AF%E5%8A%A8%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%88%90%E5%8A%9F).js)
 * [linux系统常用命令汇总](https://github.com/LCJ-MinYa/javascript/blob/master/centos%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.md)
 * [centos启用iptables防火墙](https://github.com/LCJ-MinYa/javascript/blob/master/centos%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/centos%E5%90%AF%E7%94%A8iptables%E9%98%B2%E7%81%AB%E5%A2%99.md)
-
+* [nginx配置静态网页访问与单页路由访问问题](https://github.com/LCJ-MinYa/javascript/blob/master/centos%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE%E4%B8%8E%E5%8D%95%E9%A1%B5%E8%B7%AF%E7%94%B1%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98.md)
 
 
 
