@@ -38,3 +38,19 @@ server {
 vi /etc/nginx/nginx.conf
 将user nginx修改为user root成功解决
 ```
+
+# 单页路由问题
+> 问题原因：  
+> 刷新页面时访问的资源在服务端找不到，因为vue-router设置的路径不是真实存在的路径。  
+> 如上的404现象，是因为在nginx配置的根目录下面压根没有对应的这个真实资源存在，这些访问资源都是在js里渲染的。  
+```
+	#解决单页路由问题
+    location / {
+        try_files $uri $uri/ @router;
+        index index.html;
+    }
+
+    location @router {
+        rewrite ^.*$ /index.html last;
+    }
+```
