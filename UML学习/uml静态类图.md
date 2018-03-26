@@ -7,6 +7,7 @@
 
 ## 类名
 
-| 类名      |
-| 属性      |
-| 方法      |
+| className     |
+| :--------     |
+| property      |
+| methods       |
