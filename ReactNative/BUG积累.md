@@ -1,4 +1,9 @@
-字体图标不能设置字体粗细，否则安卓会不识别
+## 安装
+### windows10 所有都安装成功运行react-native run-android报找不到设备问题
+> 原因1.如果在windows上初始化的项目，在mac运行安卓会有字符编码的问题.
+> 原因2.java_jdk版本必须为8，如果是java10，无论如何都不能通过命令行启动，只能通过android studio启动
+
+
 
 ## 组件
 ### 子组件阻止父组件点击
@@ -48,3 +53,5 @@ componentWillUnmount(){
 
 ## 样式
 安卓低版本<4.1.1>Image标签不支持borderRadius属性，需要用view包裹，在view上面设置borderRadius属性
+
+字体图标不能设置字体粗细，否则安卓会不识别
