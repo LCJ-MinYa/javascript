@@ -1,0 +1,55 @@
+@startuml
+
+title 状态 图
+skinparam defaultFontName 宋体
+
+[*] --> initMap : 初始化地图
+
+note left
+    尝试左右时序图
+    游戏触发条件
+    加上loop循环的时序
+end note
+
+state initMap{
+    Map : 地图初始化大小，背景颜色
+    Snake : Snake位置，长度，颜色
+    Food : 位置，颜色
+}
+
+initMap --> startGame : 开始游戏
+initMap --> startGame : 重新开始
+
+state startGame{
+    Map : 刷新地图
+    Snake : 蛇的移动和刷新
+    Food : 是否需要刷新
+}
+
+startGame --> control : 键盘控制
+startGame --> time : 时间执行蛇移动
+startGame --> endGame : 停止游戏按钮
+
+state control{
+    trunLeft : 左
+    trunRight : 右
+    trunTop : 上
+    trunDown : 下
+}
+
+state time{
+    time : 刷新地图时间
+}
+
+control --> endGame
+time --> endGame
+
+state endGame{
+    against_the_wall : 撞墙
+    against_the_self : 撞自己
+    win : 胜利
+}
+
+endGame --> initMap : 重新初始化地图
+
+@enduml

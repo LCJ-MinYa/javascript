@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>贪吃蛇</title>
+    <style type="text/css">
+        *{box-sizing: border-box; border: 0; margin:0; padding: 0;}
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        #app{
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            margin:0 auto;
+        }
+        #map{
+            display: block;
+            width: 600px;
+            height: 600px;
+            margin:30px auto 30px;
+        }
+        .btnBox{
+            display: flex;
+            display: -webkit-flex;
+            width: 600px;
+            justify-content: space-around;
+            margin:0 auto 20px;
+        }
+        #startBtn, #stopBtn{
+            padding: 10px 20px;
+            background: #666;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <canvas id="map" width="600" height="600"></canvas>
+        <div class="btnBox">
+            <button id="startBtn">开始游戏</button>
+            <button id="stopBtn">停止游戏</button>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="./dist/bundle.js"></script>
