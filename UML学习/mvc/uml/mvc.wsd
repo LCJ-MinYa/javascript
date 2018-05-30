@@ -1,0 +1,68 @@
+@startuml
+
+title uml图
+skinparam defaultFontName 宋体
+
+class BaseModel{
+    data
+    + initData()
+}
+
+class BaseView{
+    data
+    + build(data)
+}
+
+class BaseController{
+    array UserModel
+    class UserView
+    + render()
+}
+
+class UserView {
+    string name
+    Int age
+    + build(list)
+}
+
+class UserModel{
+    string name
+    Int age
+    + initData()
+}
+
+class UserController{
+    array UserModel
+    class UserView
+    + render()
+}
+
+class httpServer{
+    object req
+    object res
+    + includes()
+}
+
+class requestContent{
+    object head
+    object body
+}
+
+BaseController --> BaseModel
+BaseController --> BaseView
+BaseView ..> BaseModel
+
+UserModel --|> BaseModel
+UserView --|> BaseView
+UserController --|> BaseController
+
+UserController --> UserModel
+UserController --> UserView
+UserView ..> UserModel
+
+UserController *--> httpServer
+BaseController *--> httpServer
+
+requestContent <--> httpServer
+
+@enduml
