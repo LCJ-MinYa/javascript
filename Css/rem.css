@@ -21,3 +21,19 @@ html{font-size: 20px;}
 @media only screen and (min-width: 415px) and (max-width: 479px) {html {font-size: 27px;}}
 @media only screen and (min-width: 480px) {html {font-size: 30px;}}
 @media only screen and (min-width: 768px) {html {font-size: 32px;}}
+
+
+/*IE8 兼容*/
+.bg{
+    /*background-position 不能连写在background内，否则在ie8会不显示*/
+    background: url(img/border_box.png) no-repeat;
+    background-position: 50% 50%;
+}
+
+.line-height{
+    /*在border-box盒子模型下，如果设置了高度，并且存在border，line-height高度要减去border高度*/
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid #000;
+    line-height: 38px;
+}
