@@ -28,6 +28,17 @@
   "method":"aes-256-cfb"
 }
 ```
+
+## 关闭centos7防火墙
+systemctl disable firewalld 禁止开机启动
+* 看到如下命令代表禁用成功
+> Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.  
+> Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.  
+
+## 设置ss开机启动
+
 ## 命令
-* ssserver -c /xxx/shadowsocks.json -d start // 后台运行
-* ssserver -c /xxx/shadowsocks.json start // 前台运行
+* ssserver -c /xxx/shadowsocks.json -d start 后台运行
+* ssserver -c /xxx/shadowsocks.json start 前台运行
+* systemctl disable firewalld 禁止防火墙开机启动
+* systemctl stop firewalld 临时禁止防火墙
