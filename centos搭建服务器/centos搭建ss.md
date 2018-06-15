@@ -45,3 +45,12 @@ systemctl disable firewalld 禁止开机启动
 * ssserver -c /xxx/shadowsocks.json start 前台运行
 * systemctl disable firewalld 禁止防火墙开机启动
 * systemctl stop firewalld 临时禁止防火墙
+
+## ss不能连接一些判断方法
+* 本机安装客户端，需要开启系统代理PAC模式或者全局模式
+* 本机ping服务器ip地址
+* 站长工具ping ip地址（多地测试连接速度）
+* 检查服务器是否开启ss服务（重新运行一次开启命令，并前台开启查看日志）
+* 检查端口是否开放或是否关闭防火墙
+* 查看客户端ss系统日志（很有用）
+* 判断IP是否被墙，原理国内打不开，国外能
