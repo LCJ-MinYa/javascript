@@ -36,6 +36,9 @@ systemctl disable firewalld 禁止开机启动
 > Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.  
 
 ## 设置ss开机启动
+> 开机启动的文件目录 /etc/rc.d/rc.local
+* 1.修改开启启动项 vi /etc/rc.d/rc.local,添加sudo ssserver -c /xxx/shadowsocks.json -d start
+* 2.获取开机启动权限chmod +x /etc/rc.d/rc.local(CentOS 7正打算抛弃/etc/rc.d/rc.local，重启前需要运行以下命令获得权限，否则rc.local不会执行)
 
 ## 命令
 * ssserver -c /xxx/shadowsocks.json -d start 后台运行
