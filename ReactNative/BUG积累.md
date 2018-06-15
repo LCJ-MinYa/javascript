@@ -55,3 +55,20 @@ componentWillUnmount(){
 安卓低版本<4.1.1>Image标签不支持borderRadius属性，需要用view包裹，在view上面设置borderRadius属性
 
 字体图标不能设置字体粗细，否则安卓会不识别
+
+## 编译
+
+### Mac打包安卓正式包(gradlew相关报错)
+执行sudo cd android && ./gradlew assembleRelease,报错信息:-bash: ./gradlew: No such file or directory
+进入android目录，单独执行./gradlew assembleRelease报错(-bash: ./gradlew: Permission denied)
+解决办法: chmod +x gradlew
+
+
+
+
+
+
+
+
+
+
