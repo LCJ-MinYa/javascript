@@ -59,9 +59,9 @@ componentWillUnmount(){
 ## 编译
 
 ### Mac打包安卓正式包(gradlew相关报错)
-执行sudo cd android && ./gradlew assembleRelease,报错信息:-bash: ./gradlew: No such file or directory
-进入android目录，单独执行./gradlew assembleRelease报错(-bash: ./gradlew: Permission denied)
-解决办法: chmod +x gradlew
+执行sudo cd android && ./gradlew assembleRelease,报错信息:-bash: ./gradlew: No such file or directory  
+进入android目录，单独执行./gradlew assembleRelease报错(-bash: ./gradlew: Permission denied)  
+解决办法: chmod +x gradlew  
 
 
 
