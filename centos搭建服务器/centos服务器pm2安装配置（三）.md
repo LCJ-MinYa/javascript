@@ -29,17 +29,13 @@ pm2 startup                   # 创建开机自启动命令
 pm2 save                      # 保存当前应用列表
 pm2 resurrect                 # 重新加载保存的应用列表
 </pre>
-pm2实现自启动：  
-1、多数用户一般都是使用nodejs的二进制包安装的，查找node的位置，比如我的位置是/usr/node/bin/node  
-#which node  
-将node链接至/usr/bin目录  
-ln -s /usr/bin/node /usr/node/bin/node(替换为您node的位置)  
-2、启动node.js应用  
-#NODE_ENV=production pm2 start app.js -i 0  
-3、保存脚本  
-#pm2 save  
-4、创建开机启动脚本  
-#pm2 startup systemd   
-5、重启服务器测试  
-#reboot  
+## pm2实现自启动：
+* 1、启动node.js应用
+> pm2 start app.js -i 1 --name appName(以cluster模式启动1个进程)  
+* 2、保存脚本
+> pm2 save  
+* 3、创建开机启动脚本
+> pm2 startup systemd   
+* 4、重启服务器测试
+> reboot  
 说明：如果您需要启动多个服务，需要多次运行步骤2即可（建议app.js改成绝对路径，加上–-name参数，或者改成不同的名字，比如server.js,server1.js）
