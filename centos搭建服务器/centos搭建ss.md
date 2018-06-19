@@ -54,3 +54,10 @@ systemctl disable firewalld 禁止开机启动
 * 检查端口是否开放或是否关闭防火墙
 * 查看客户端ss系统日志（很有用）
 * 判断IP是否被墙，原理国内打不开，国外能
+
+## BBR魔改加速
+> 采用的是千影的一键安装脚本，该脚本介绍支持Centos 6+ / Debian 7+ / Ubuntu 14+，但不支持Debian 8  
+* 运行以下命令，保存一个脚本工具在当前文件夹下，wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+> 命令下载了一个脚本，并且开启了权限，然后运行这个脚本.  
+* 运行脚本会看到一个0-9选项的界面，并且可以查看到当前的加速内核和状态，选择1安装BBR/BBR魔改版内核，等待安装完毕后Y确认重启.
+* 重新运行./tcp.sh脚本，输入4执行开启加速.当看到[信息]魔改版本BBR启动成功文本即可。（不需要单独设置开机启动，已自启动）
