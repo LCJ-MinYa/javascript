@@ -92,4 +92,10 @@ service iptables restart
 
 #关闭iptables
 service iptables stop
+
+#最后重启防火墙使配置生效（等同重新启动）
+systemctl restart iptables.service
+
+#设置防火墙开机启动
+systemctl enable iptables.service
 ```
