@@ -50,6 +50,43 @@ componentWillUnmount(){
 不过该方法不是很严谨，在集成的子组件中能修改父组件的setState方法，不过在javascript的语法中很适用，建议只在出现上述bug的页面中使用。
 ```
 
+### FlatList或ListView更改数据源视图不更新或者数据显示错乱
+```javascript
+/*  key如果是用的 item.index().toString()，key一直是0-9，所以数据不刷新
+ *  此后，不建议key用数组下标显示
+*/
+```
+
+### 0.55不能输入中文
+```javascript
+import React, {Component} from 'react';
+import {Platform, TextInput} from 'react-native';
+
+class WPTextInput extends Component {
+  shouldComponentUpdate(nextProps){
+    return Platform.OS !== 'ios' || (this.props.value === nextProps.value &&  
+           (nextProps.defaultValue == undefined || nextProps.defaultValue == '' )) || 
+           (this.props.defaultValue === nextProps.defaultValue && (nextProps.value == undefined || nextProps.value == '' ));
+  }
+  render() {
+    return <TextInput {...this.props} />;
+  }
+};
+
+export default WPTextInput;
+```
+
+### textinput作为组件，默认值(value为数组中的数据)初次不渲染
+```javascript
+//强制刷新
+componentWillReceiveProps(nextProps) {
+    if(nextProps.value && nextProps.isFirstUpdate){
+        setTimeout(()=>{
+            this.forceUpdate()
+        }, 50)
+    }
+}
+```
 
 ## 样式
 安卓低版本<4.1.1>Image标签不支持borderRadius属性，需要用view包裹，在view上面设置borderRadius属性
