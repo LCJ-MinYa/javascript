@@ -89,9 +89,17 @@ componentWillReceiveProps(nextProps) {
 ```
 
 ## 样式
+
+### 安卓低版本borderRadius属性
 安卓低版本<4.1.1>Image标签不支持borderRadius属性，需要用view包裹，在view上面设置borderRadius属性
 
+### 字体图标font-weight
 字体图标不能设置字体粗细，否则安卓会不识别
+
+### IOS三倍分辨率border问题（设置小数点）
+ios设置borderTopWidth: 0.5，在ios上会导致border失真(具体表现为border占据很大一块)
+* 1.只有borderTopWidth会有该问题，borderBottomWidth不存在该问题，可将borderTopWidth改为borderBottomWidth
+* 2.将borderTopWidth: 0.5改为borderTopWidth: 0.33(比例1/3 == 0.33)
 
 ## 编译
 
