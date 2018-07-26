@@ -100,6 +100,17 @@ componentWillReceiveProps(nextProps) {
 ios设置borderTopWidth: 0.5，在ios上会导致border失真(具体表现为border占据很大一块)
 * 1.只有borderTopWidth会有该问题，borderBottomWidth不存在该问题，可将borderTopWidth改为borderBottomWidth
 * 2.将borderTopWidth: 0.5改为borderTopWidth: 0.33(比例1/3 == 0.33)
+```javascript
+/*
+ * hairlineWidth:CallExpression
+ * 该用来定义当前平台最细的宽度。该属性用来设置边框或者两个组件之间的分割线
+ */
+{
+    borderBottomColor: '#bbb',
+    borderBottomWidth: StyleSheet.hairlineWidth
+}
+
+```
 
 ## 编译
 
