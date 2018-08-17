@@ -25,3 +25,5 @@ buildToolsVersion "24.0.1"
 ```
 android:resizeableActivity="true"
 ```
+
+* RN0.56.0版本，自动适配了全面屏幕，不需要单独设置了
