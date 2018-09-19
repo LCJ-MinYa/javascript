@@ -1,1 +1,5 @@
-ReactNative-SwitchHeaderTitle.md
+## SwitchHeaderTitle 自定义
+
+![image](./img/SwitchHeaderTitle.gif)
+
+<video src="./img/SwitchHeaderTitle.mp4" width="320" height="240" controls="controls"></video>
