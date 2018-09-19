@@ -1,4 +1,4 @@
-### expected the enhancer to be a function
+### 报错信息：expected the enhancer to be a function
 
 ```javascript
 /*redux源码相关*/
