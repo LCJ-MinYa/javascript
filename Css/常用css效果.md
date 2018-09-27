@@ -72,3 +72,60 @@ $(".child-box").on('click', function() {
     event.stopPropagation();
 })
 ```
+
+## 安卓字体未垂直居中
+```css
+/*安卓中单独设置normal，ios中设置line-height: xx px*/
+p{
+    line-height: normal
+}
+```
+
+## img图片（未知宽高）在div中居中显示
+```css
+.father-box{
+    width: 100%;
+    height: 9.35rem;
+    position: relative;
+    overflow: hidden;
+}
+.father-box img{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+```
+
+## css中计算属性calc
+```css
+div{
+    width:-webkit-calc(100% - 2.5rem);
+    width:-moz-calc(100% - 2.5rem);
+    width:calc(100% - 2.5rem);
+}
+```
+
+## 手机端1px实现
+```css
+/* 第一种
+ * 伪类缩放
+ */
+div:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: #eaeaea;
+    bottom: 0;
+    -webkit-transform:scale(0.5);
+    transform: scale(0.5);
+}
+```
