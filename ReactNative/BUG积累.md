@@ -119,6 +119,18 @@ ios设置borderTopWidth: 0.5，在ios上会导致border失真(具体表现为bor
 进入android目录，单独执行./gradlew assembleRelease报错(-bash: ./gradlew: Permission denied)  
 解决办法: chmod +x gradlew  
 
+### windows运行rn项目报模块找不到(AccessibilityInfo 0.56.0)
+> 原因：react-native项目本身版本的问题  
+> 解决办法：修改package.json
+* "react": "16.3.1"
+* "react-native": "0.55.4"
+* "babel-preset-react-native": "2.1.0"
+* 删除node_modules然后重新安装
+
+### windows中原文件有报错切运行过（修改报错并反复确认没问题还是报相同的错误=>git忽略文件夹大小写变动问题）
+> react-native缓存问题  
+> react-native start --reset-cache  
+
 
 
 
