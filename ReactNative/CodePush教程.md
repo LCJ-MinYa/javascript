@@ -30,6 +30,19 @@ appcenter codepush deployment list -a minya/APP_ANDROID --displayKeys
 * 7.发布更新
 > appcenter codepush release-react -a minya/APP_IOS -t 1.0.0 -m --description "更新描述"
 
+## 多部署安装
+> [多部署文档](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/react-native#multi-deployment-testing),按照文档配置即可。  
+```
+注意点:
+debug {
+    buildConfigField "String", "CODEPUSH_KEY", '""' //这里也可以添加测试环境的CODEPUSH_KEY然后在模拟器里面测试
+}
+
+releaseStaging {
+    buildConfigField "String", "CODEPUSH_KEY", '"<INSERT_STAGING_KEY>"'
+    //matchingFallbacks = ['release'] 该行添加会报错，注释即可编译
+}
+```
 
 ## 命令
 ```
@@ -38,4 +51,19 @@ appcenter codepush deployment history Staging
 
 删除部署历史(Staging)
 appcenter codepush deployment clear -a minya/APP_IOS Staging
+```
+
+## 技巧
+> 在使用codepush中，经常需要用到很多命令，但是一时间又不能完全记忆，可以使用package.json中的script中的命令配置
+```
+"scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "add ios": appcenter codepush release-react -a minya/APP_IOS,
+    "add android": appcenter codepush release-react -a minya/APP_ANDROID,
+    "delete ios staging": appcenter codepush deployment clear -a minya/APP_IOS Staging,
+    "delete android staging": appcenter codepush deployment clear -a minya/APP_ANDROID Staging,
+}
+其中正式环境的发布不需要通过命令，在确认预发布环境ok直接可以通过appcenter页面点击按钮推送到正式环境
+description描述信息换行问题，在命令行中\n,\\n,"\n","\\n"都尝试过，都不能换行，直接在appcenter页面上编辑回车就可以了。。。。
 ```
