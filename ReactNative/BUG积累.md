@@ -60,6 +60,70 @@ componentWillUnmount(){
 ### FlatList实现自适应高度
 > FlatList默认flexGrow: 1,导致FlatList不能自适应高度，加上样式flexGrow: 0即可
 
+### FlatList性能缓慢
+> 警告信息如下: you have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc.
+```javascript
+/*
+ * 这是因为renderItemView()中渲染的组件没有继承自React.PureComponent
+ * 推荐在FlatList和renderItemView中都继承React.PureComponent而不是React.Component
+ */
+
+class MyListItem extends React.PureComponent {
+  _onPress = () => {
+    this.props.onPressItem(this.props.id);
+  };
+
+  render() {
+    const textColor = this.props.selected ? "red" : "black";
+    return (
+      <TouchableOpacity onPress={this._onPress}>
+        <View>
+          <Text style={{ color: textColor }}>
+            {this.props.title}
+          </Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
+}
+
+class MultiSelectList extends React.PureComponent {
+  state = {selected: (new Map(): Map<string, boolean>)};
+
+  _keyExtractor = (item, index) => item.id;
+
+  _onPressItem = (id: string) => {
+    // updater functions are preferred for transactional updates
+    this.setState((state) => {
+      // copy the map rather than modifying state.
+      const selected = new Map(state.selected);
+      selected.set(id, !selected.get(id)); // toggle
+      return {selected};
+    });
+  };
+
+  _renderItem = ({item}) => (
+    <MyListItem
+      id={item.id}
+      onPressItem={this._onPressItem}
+      selected={!!this.state.selected.get(item.id)}
+      title={item.title}
+    />
+  );
+
+  render() {
+    return (
+      <FlatList
+        data={this.props.data}
+        extraData={this.state}
+        keyExtractor={this._keyExtractor}
+        renderItem={this._renderItem}
+      />
+    );
+  }
+}
+```
+
 ### 0.55不能输入中文
 ```javascript
 import React, {Component} from 'react';
