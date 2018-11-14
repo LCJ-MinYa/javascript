@@ -57,6 +57,9 @@ componentWillUnmount(){
 */
 ```
 
+### FlatList实现自适应高度
+> FlatList默认flexGrow: 1,导致FlatList不能自适应高度，加上样式flexGrow: 0即可
+
 ### 0.55不能输入中文
 ```javascript
 import React, {Component} from 'react';
