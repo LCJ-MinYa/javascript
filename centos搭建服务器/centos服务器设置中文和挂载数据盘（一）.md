@@ -1,10 +1,7 @@
 # 设置centos系统为中文
 cd /etc/locale.conf （语言设置位置，在文本内插入下面内容）  
 <pre>
-LANG="zh_CN.GB18030"
-LANGUAGE="zh_CN.GB18030:zh_CN.GB2312:zh_CN"
-SUPPORTED="zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en"
-SYSFONT="lat0-sun16"
+LANG="zh_CN.UTF-8"
 </pre>
 
 注意:  
