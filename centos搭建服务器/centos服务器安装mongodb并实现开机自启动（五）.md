@@ -29,7 +29,7 @@ MongoDB server 加入开机自启动
 vi /etc/rc.local 使用编辑器打开配置文件，并在其中加入下面一行代码  
 
 /bin/mongod --dbpath /root/mongodb_data/ --fork --port 9000 --logpath=/root/log/mongodb/mongodb.log --logappend --auth
-修改rc.local文件为有权限的可执行文件，如： chmod +x  rc.local(腾讯云直接有权限，不用修改，阿里云需要修改了才有权限)  
+修改rc.local文件为有权限的可执行文件，如： chmod +x  rc.local(腾讯云，阿里云需要修改了才有权限)  
 
 /etc/mongod.conf （为mongodb的配置文件）  
 
