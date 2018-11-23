@@ -31,7 +31,8 @@ pm2 resurrect                 # 重新加载保存的应用列表
 </pre>
 ## pm2实现自启动：
 * 1、启动node.js应用
-> pm2 start app.js -i 1 --name appName(以cluster模式启动1个进程)  
+> pm2 start app.js -i 1 --name appName(以fork模式启动1个进程)  
+> pm2 start app.js -i 0 --name appName(以cluster模式启动根据cpu个数相同的进程)
 * 2、保存脚本
 > pm2 save  
 * 3、创建开机启动脚本
