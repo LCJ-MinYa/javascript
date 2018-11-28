@@ -1,5 +1,5 @@
 ## 安装
-* 1.全局安装App Center CLI
+* 1.全局安装App Center CLI(目前appcenter-cli受event-stream恶意代码攻击 event-stream@3.3.6被注入恶意代码)
 > npm install -g appcenter-cli
 
 * 2.注册App Center账号
