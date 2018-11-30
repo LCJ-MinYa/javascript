@@ -17,3 +17,6 @@ cp name1 name2(复制文件1到文件2，文件1必须存在)
 ## 查看文件夹大小
 * du --max-depth=1 -h
 > 查看当前目录下文件夹大小，按照大小依次排序(由于磁盘空间将满,想知道哪些文件夹的内容过大，删除一些大且无用文件不断的du –max-depth=1 -h，筛选出你要删除的文件)
+
+## Linux中查看SSH登录失败次数
+> cat /var/log/secure* | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort | uniq -c
