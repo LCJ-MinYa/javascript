@@ -20,3 +20,17 @@ cp name1 name2(复制文件1到文件2，文件1必须存在)
 
 ## Linux中查看SSH登录失败次数
 > cat /var/log/secure* | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort | uniq -c
+
+## 创建用户与更改密码
+* adduser username 创建用户
+* passwd username  修改密码
+
+## 切换用户
+* su root 切换root用户
+
+## ssh相关
+* service sshd restart 重启ssh服务
+
+## 终端ssh断开方法
+* logout
+* Ctrl+D
