@@ -40,9 +40,11 @@ cp name1 name2(复制文件1到文件2，文件1必须存在)
 ```
 #%PAM-1.0
 
+auth required pam_tally2.so deny=3 unlock_time=300 even_deny_root root_unlock_time=10
+
+/*注释说明*/
 #在#%PAM-1.0的下面，即第二行，添加内容，一定要写在前面，如果写在后面，虽然用户被锁定，但是只要用户输入正确的密码，还是可以登录的！
 #even_deny_root 也限制root用户;
 #deny次数
 #unlock_time锁定时间（秒）
-auth required pam_tally2.so deny=3 unlock_time=300 even_deny_root root_unlock_time=10
 ```
