@@ -75,10 +75,33 @@ $(".child-box").on('click', function() {
 
 ## 安卓字体未垂直居中
 ```css
-/*安卓中单独设置normal，ios中设置line-height: xx px*/
-p{
-    line-height: normal
+/*安卓浏览器字体不垂直居中，REM计算后小数点会导致，如果用偶数大于12px可以解决，如果使用REM则可以通过table布局来解决*/
+<p class="h2">
+    <span>无缝对接<i>云ERP进销存、网店版</i></span>
+</p>
+
+.header-content p.h2{
+    display: table;
+    width: 12.8rem;
+    height: 1.35rem;
+    background: url(../img/wulianbao/header_title_dec.png) no-repeat 50% 50%;
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto 0.5rem;
 }
+.header-content p.h2 span{
+    display: table-cell;
+    font-size: 0.75rem;
+    vertical-align: middle;
+    color: #fff;
+}
+.header-content p.h2 i{
+    font-size: 0.75rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*注意点: 父元素不能设置line-height，vertical-align: middle设置在子元素上*/
 ```
 
 ## img图片（未知宽高）在div中居中显示
