@@ -1,3 +1,7 @@
+# 自2018-12-12维护迁移（不再维护）
+* [github地址](https://github.com/LCJ-MinYa/blog/tree/master/source/_posts)
+* [blog地址](https://blog.ziyiu.com)
+
 # react native
 react native日常学习记录  
 * <a href="https://github.com/LCJ-MinYa/javascript/blob/master/ReactNative/ReactNative%E4%B8%8E%E5%8E%9F%E7%94%9F%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md">ReactNative与原生交互注意事项</a>.  
